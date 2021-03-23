@@ -2,34 +2,35 @@
   <div @click="sendwallpost('Мой текст сообщения, который надо отправить на страницу Вконтакте');">отправить</div>
 </template>
 <script>
-// import VK from '??????????';
+
+// import VK from '??????????'; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export default {
   data() {
     return {
-      loading: false,
-      walls: null,
-      error: null,
+      
     };
   },
-  // created() {
-  //   this.initVK();
-  // },
+   created() {
+     this.initVK();
+   },
 
-  // methods: {
-  //   initVK() {
-  //     VK.init({
-  //       apiId: 	7798778 // id созданного вами приложения вконтакте 
-  //     });
-  //   }, 
+   methods: {
+     initVK() {
+     // ругается на VK в коде ниже !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       VK.init({        
+         apiId: 	7798778 // id созданного мною приложения вконтакте 
+       });
+     }, 
 
-  //    sendwallpost(mydata) {
-  //       VK.api("wall.post", {
-  //           owner_id: '553591004',
-  //           message: mydata
-  //       }, function (data) {
-  //         console.log(data);
-  //       });
-  //    }
-  // }
+      sendwallpost(mydata) {
+      // ругается на VK в коде ниже !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+         VK.api("wall.post", {
+             owner_id: '553591004', // id моего аккаунта вконтакте 
+             message: mydata
+         }, function (data) {
+           console.log(data);
+         });
+      }
+   }
 }
 </script>
