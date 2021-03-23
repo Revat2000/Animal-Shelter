@@ -1,5 +1,5 @@
 <template>
-  <div @click="sendwallpost('Мой текст сообщения');">отправить</div>
+  <div @click="sendwallpost('Мой текст сообщения, который надо отправить на страницу Вконтакте');">отправить</div>
 </template>
 <script>
 // import VK from '??????????';
